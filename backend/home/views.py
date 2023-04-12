@@ -1,3 +1,5 @@
+from .models import Testing
+from django.views.generic import CreateView, UpdateView, DetailView, ListView
 from django.shortcuts import render
 
 
