@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from home.models import Testing,Testiop
-from .serializers import TestingSerializer,TestiopSerializer
+from home.models import Testing,Testiop,Wert
+from .serializers import TestingSerializer,TestiopSerializer,WertSerializer
 from rest_framework import authentication
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from rest_framework.viewsets import ModelViewSet, ViewSet
@@ -42,3 +42,8 @@ class TestiopViewSet(viewsets.ModelViewSet):
     serializer_class = TestiopSerializer
     authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
     queryset = Testiop.objects.all()
+
+class WertViewSet(viewsets.ModelViewSet):
+    serializer_class = WertSerializer
+    authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
+    queryset = Wert.objects.all()

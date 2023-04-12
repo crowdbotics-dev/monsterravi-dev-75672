@@ -6,3 +6,6 @@ class Testing(models.Model):
 class Testiop(models.Model):
     'Generated Model'
     testinghj = models.BigIntegerField()
+class Wert(models.Model):
+    'Generated Model'
+    rest = models.BigIntegerField()
